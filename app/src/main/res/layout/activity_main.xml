@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Mensagem de boas-vindas -->
+    <TextView
+        android:id="@+id/txtBoasVindas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem-vindo ao Donuts App"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <!-- Conteúdo principal -->
+    <FrameLayout
+        android:id="@+id/frameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_below="@id/txtBoasVindas" />
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav"
+        app:labelVisibilityMode="labeled" />
+
+</RelativeLayout>

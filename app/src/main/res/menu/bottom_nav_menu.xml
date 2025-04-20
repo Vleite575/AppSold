@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_cadastrar_venda"
+        android:icon="@drawable/ic_add_shopping"
+        android:title="Venda" />
+
+    <item
+        android:id="@+id/menu_usuarios_produtos"
+        android:icon="@drawable/ic_person_add"
+        android:title="Usuários/Produtos" />
+
+    <item
+        android:id="@+id/menu_vendas_abertas"
+        android:icon="@drawable/ic_list"
+        android:title="A Receber" />
+
+    <item
+        android:id="@+id/menu_mais"
+        android:icon="@drawable/ic_more"
+        android:title="Mais" />
+
+</menu>

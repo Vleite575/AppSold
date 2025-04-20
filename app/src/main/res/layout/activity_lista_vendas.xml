@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1F1F1F"
+        android:title="Vendas"
+        android:titleTextColor="#FFFFFF"
+        android:elevation="4dp" />
+
+    <EditText
+        android:id="@+id/editFiltro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Filtrar por cliente ou data"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:background="@drawable/bg_input"
+        android:padding="12dp"
+        android:layout_margin="12dp" />
+
+    <TextView
+        android:id="@+id/txtSemCompras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nenhuma compra cadastrada."
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="32dp"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerVendas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp" />
+</LinearLayout>

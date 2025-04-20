@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <!-- Toolbar com estilo escuro -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1E1E1E"
+        android:title="Cadastro Vendas"
+        android:titleTextColor="#FFFFFF"
+        android:elevation="2dp" />
+
+    <!-- Conteúdo com rolagem -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Campo Cliente -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cliente"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCliente"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input_dark"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#AAAAAA"
+                android:hint="Selecione o cliente"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Campo Produto -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Produto"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerProduto"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input_dark"
+                android:popupBackground="#252525"
+                android:spinnerMode="dropdown"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Campo Quantidade -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quantidade"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerQuantidade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input_dark"
+                android:popupBackground="#252525"
+                android:spinnerMode="dropdown"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Total -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total: R$ 0,00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Botão Salvar -->
+            <Button
+                android:id="@+id/btnSalvarVenda"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Salvar Venda"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1E88E5"
+                android:textSize="16sp"
+                android:elevation="4dp"
+                android:stateListAnimator="@null"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

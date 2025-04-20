@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutHistorico"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    tools:context=".ui.HistoricoComprasActivity">
+
+    <!-- Toolbar fixa no topo -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        android:title="Histórico de Compras"
+        android:titleTextColor="@android:color/white"/>
+
+    <!-- Conteúdo com padding separado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Campo de busca -->
+        <EditText
+            android:id="@+id/edtFiltroCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Buscar cliente"
+            android:textColorHint="#AAAAAA"
+            android:textColor="#FFFFFF"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:layout_marginBottom="16dp"
+            android:inputType="textPersonName" />
+
+        <!-- RecyclerView com peso -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+</LinearLayout>
